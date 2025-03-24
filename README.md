@@ -25,7 +25,7 @@
 ## Var List
 
 ### Bools
-<sub/> caseSensitive = true
+caseSensitive = true
 
 #### Standard Bools
 | Variable Name             | Default | Description                                                            |
