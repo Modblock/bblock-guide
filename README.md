@@ -120,6 +120,8 @@ THE INCONSISTENCIES ARE **NOT MY FAULT, blame the devs.** (jk they are amazing p
 | 5            |  #FFFF00  | ![yellow](y.png)  |
 | 6            |  #FF00FF  | ![magenta](m.png) |
 | 7            |  #00FFFF  | ![cyan](c.png)    |
+
+If you wish to bypass this color limit, I would recommend using the ["Colorful!"](https://github.com/ImPurplez/Colorful/releases/tag/v1) mod.
 ### Deco Properties
 
 ### Still Decos
