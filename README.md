@@ -111,9 +111,16 @@ THE INCONSISTENCIES ARE **NOT MY FAULT, blame the devs.** (jk they are amazing p
 ## Deco
 
 ### Color Channels (and another bypass mod)
-| ColorChannel | DecoColor |
-| ------------ | --------- |
-|              |           |
+| ColorChannel | DecoColor | -                 |
+| ------------ | :-------: | ----------------- |
+| 0            |  #FFFFFF  | ⬜                |
+| 1            |  #000000  | ⬛                |
+| 2            |  #FF0000  | 🟥               |
+| 3            |  #0000FF  | 🟦               |
+| 4            |  #00FF00  | 🟩               |
+| 5            |  #FFFF00  | ![yellow](y.png)  |
+| 6            |  #FF00FF  | ![magenta](m.png) |
+| 7            |  #00FFFF  | ![cyan](c.png)    |
 ### Deco Properties
 
 ### Still Decos
