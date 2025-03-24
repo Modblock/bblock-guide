@@ -1,6 +1,5 @@
 # The New and Improved _beatblock guide_
-
-<sub/> More info from base editor guide.
+More info from base editor guide.
 
 ## Table of Contents
 
