@@ -35,7 +35,7 @@ caseSensitive = true
 | vfx.drawCombo             | true    | Should combo be displayed?                                             |
 | vfx.drawAccuracy          | true    | Should accuracy be displayed in expanded hud?                          |
 | vfx.drawSongTitle         | true    | Should song title be displayed in expanded hud?                        |
-| vfx DrawUI                | true    | Should UI be displayed? (has priority over draw vars)                  |
+| vfx.drawUI                | true    | Should UI be displayed? (has priority over draw vars)                  |
 | vfx.ignoreNoiseCorrection | false   | Should the alternate noise calculation methode be used?                |
 | exitingLevel              | false   | Should the level end on pause-resume or beat 0 if placed in load beat? |
 | vfx.calibration           | false   | Should the level use calibration system?                               |
@@ -61,10 +61,17 @@ THE INCONSISTENCIES ARE **NOT MY FAULT, blame the devs.** (jk they are amazing p
 
 ### Eases
 
-| Variable Name | Default | Description |
-| ------------- | ------- | ----------- |
-|               |         |             |
-
+| Variable Name           | Default | Description                                                    |
+| ----------------------- | ------- | -------------------------------------------------------------- |
+| vfx.tapWidthPulse       | 3       | Line thickness for taps on pulses.                             |
+| vfx.angleTwist.offset   | 0       | How much angles should be offset by at the specified distance. |
+| vfx.angleTwist.distance | 8       | How far away angles should be offset from.                     |
+| vfx.hglitch.strength    | 0       | How many pixels in either direction hglitch can shift.         |
+| vfx.hglitch.resolution  | 3       | How tall in pixels hglitch "chunks" should be.                 |
+| vfx.hwaves.strength     | 0       | Controls the amplitude of the screen waves.                    |
+| vfx.hwaves.offset       | 0       | How offset the waves should be.                                |
+| vfx.hwaves.offsetDelta  | 0       | How much the offset should be changed ever frame.              |
+|                         |         |                                                                |
 <sub/> There are text eases, more info **will** be in wiki
 
 ## Deco
