@@ -35,7 +35,7 @@ More info from base editor guide.
     1. Import file to Audacity by dragging and dropping
     2. Go to file>export audio
     3. Select Export to computer
-    4. Replace `.wav`(or whatever else is there) in the file name with `.ogg` and it will automatically convert it.
+    4. Change format to `Ogg Vorbis File` from `WAV (Microsoft)`
     5. Re-import the song. 
 #### Make sure you have file name extensions enabled.
 + Windows
