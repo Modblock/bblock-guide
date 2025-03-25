@@ -9,7 +9,47 @@ More info from base editor guide.
 
 ### Importing Songs
 
+1. Download song file in the format of OGG Vorbis(.ogg) (for YT vids use [cobalt](https://cobalt.tools))
+2. Open two instances(or tabs) of file explorer.
+3. Open one to where you downloaded the file to and the other instance(or tab) to the level folder 
+4. Move/copy the .ogg file to the level folder.
+5. In the level editor place a play song event(in the gameplay section)
+6. In the 'file' section, put the file name(with .ogg). 
+7. Make sure to put the BPM and offset.
+
+### GETTING THE OFFSET [if you don't do this I will personally find and attack you(that's a joke)]
+
+1. Download [Audacity](https://www.audacityteam.org/download/windows/)
+2. Open Audacity
+3. Drag and drop the OGG file from file explorer to Audacity.
+4. Set the time view to seconds+milliseconds in Audacity.
+5. Zoom in to the start of the song and click where the wavelengths start to spike. (most songs will be under 1 second but there are some exceptions)
+6. Enter the value shown in the time display into the offset section of the play song trigger.
+
 ### Issues with Importing Songs
+
+#### Make sure that you have an OGG vorbis file.
++ Many converters and downloaders will give you a non OGG file just with the file extension changed.
++ Downloading YT vids from [cobalt](https://cobalt.tools) is known to work
++ Converting with Audacity also works
+    1. Import file to Audacity by dragging and dropping
+    2. Go to file>export audio
+    3. Select Export to computer
+    4. Replace `.wav`(or whatever else is there) in the file name with `.ogg` and it will automatically convert it.
+    5. Re-import the song. 
+#### Make sure you have file name extensions enabled.
++ Windows
+    1. Press view on the top ribbon in file explorer.
+    2. Hover over show.
+    3. Turn on file name extensions.
++ Linux
+    1. Most Linux file managers already have this setup, and there are so many there's no point in listing instructions for all of theme here.
+
++ MacOS
+    1. Open finder
+    2. In the top bar, go to Finder > Settings.
+    3. From there go to advanced and turn "show all filename extensions" on.
++ Make sure you actually changed BPM and added your offset.
 
 ### Placing Notes & Events
 
@@ -41,7 +81,7 @@ caseSensitive = true
 | paused                    | false   | Should the level be paused?                                            |
 | holdEntityDraw            | true    | Should do something with holds?                                        |
 
-#### Editor Only Bools (broken stuff)
+#### Editor Only Bools (broken stuff and goofy)
 | Variable Name             | Default | Description                                                                                                       |
 | ------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------- |
 | choosingVariant           | true    | Should do something?                                                                                              |
@@ -115,7 +155,7 @@ THE INCONSISTENCIES ARE **NOT MY FAULT, blame the devs.** (jk they are amazing p
 | Variable Name       | Default | Description                                                            |
 | ------------------- | ------- | ---------------------------------------------------------------------- |
 | p.x                 | 300     | Cranky's X pos.                                                        |
-| p-----------------y | 1-0     | C--------------------------------------------------------------------. |
+| p.y                 | 180     | Cranky's Y pos.                                                        |
 | p.paddleDistance    | 31      | The distance between Cranky and the Paddle.                            |
 | p.lookYOffset       | 0       | Changes where Cranky's eyes are drawn on the Y axis.                   |
 | p.lookRadius        | 6       | The radius where Cranky's eyes will follow your cursor.                |
@@ -139,16 +179,16 @@ THE INCONSISTENCIES ARE **NOT MY FAULT, blame the devs.** (jk they are amazing p
 ## Deco
 
 ### Color Channels (and another bypass mod)
-| ColorChannel | DecoColor | -                 |
-| ------------ | :-------: | ----------------- |
-| 0            |  #FFFFFF  | ⬜                |
-| 1            |  #000000  | ⬛                |
-| 2            |  #FF0000  | 🟥               |
-| 3            |  #0000FF  | 🟦               |
-| 4            |  #00FF00  | 🟩               |
-| 5            |  #FFFF00  | ![yellow](y.png)  |
-| 6            |  #FF00FF  | ![magenta](m.png) |
-| 7            |  #00FFFF  | ![cyan](c.png)    |
+| ColorChannel | DecoColor | -                              |
+| ------------ | :-------: | ------------------------------ |
+| 0            |  #FFFFFF  | ![white](pics\palette\w.png)   |
+| 1            |  #000000  | ![black](pics\palette\b.png)   |
+| 2            |  #FF0000  | ![red](pics\palette\r.png)     |
+| 3            |  #0000FF  | ![blue](pics\palette\bl.png)   |
+| 4            |  #00FF00  | ![green](pics\palette\g.png)   |
+| 5            |  #FFFF00  | ![yellow](pics\palette\y.png)  |
+| 6            |  #FF00FF  | ![magenta](pics\palette\m.png) |
+| 7            |  #00FFFF  | ![cyan](pics\palette\c.png)    |
 
 If you wish to bypass this color limit, I would recommend using the ["Colorful!"](https://github.com/ImPurplez/Colorful/releases/tag/v1) mod.
 ### Deco Properties
