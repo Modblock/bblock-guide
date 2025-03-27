@@ -17,7 +17,8 @@ More info from base editor guide.
 6. In the 'file' section, put the file name(with .ogg). 
 7. Make sure to put the BPM and offset.
 
-### GETTING THE OFFSET [if you don't do this I will personally find and attack you(that's a joke)]
+### GETTING THE OFFSET 
+#### [if you don't do this I will personally find and attack you (that's a joke) ]
 
 1. Download [Audacity](https://www.audacityteam.org/download/windows/)
 2. Open Audacity
