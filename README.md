@@ -215,14 +215,14 @@ these are "caseSensitive"
 
 | ColorChannel | DecoColor |                                |
 | ------------ | :-------: | ------------------------------ |
-| 0            |  #FFFFFF  | ![white](pics\palette\w.png)   |
-| 1            |  #000000  | ![black](pics\palette\b.png)   |
-| 2            |  #FF0000  | ![red](pics\palette\r.png)     |
-| 3            |  #0000FF  | ![blue](pics\palette\bl.png)   |
-| 4            |  #00FF00  | ![green](pics\palette\g.png)   |
-| 5            |  #FFFF00  | ![yellow](pics\palette\y.png)  |
-| 6            |  #FF00FF  | ![magenta](pics\palette\m.png) |
-| 7            |  #00FFFF  | ![cyan](pics\palette\c.png)    |
+| 0            |  #FFFFFF  | ![white](pics/palette/w.png)   |
+| 1            |  #000000  | ![black](pics/palette/b.png)   |
+| 2            |  #FF0000  | ![red](pics/palette/r.png)     |
+| 3            |  #0000FF  | ![blue](pics/palette/bl.png)   |
+| 4            |  #00FF00  | ![green](pics/palette/g.png)   |
+| 5            |  #FFFF00  | ![yellow](pics/palette/y.png)  |
+| 6            |  #FF00FF  | ![magenta](pics/palette/m.png) |
+| 7            |  #00FFFF  | ![cyan](pics/palette/c.png)    |
 
 If you wish to bypass this color limit, I would recommend using the ["Colorful!"](https://github.com/ImPurplez/Colorful/releases/tag/v1) mod.
 
