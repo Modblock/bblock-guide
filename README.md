@@ -56,7 +56,8 @@ More info from base editor guide.
 
 #### Make sure that you have an OGG vorbis file
 
-+ Many converters and downloaders will give you a non OGG file just with the file extension changed.
+- Many converters and downloaders will give you a non OGG file just with the file extension changed.
+
 - Downloading YT vids from [cobalt](https://cobalt.tools) is known to work
 - Converting with Audacity also works
     1. Import file to Audacity by dragging and dropping
@@ -67,10 +68,11 @@ More info from base editor guide.
 
 #### Make sure you have file name extensions enabled
 
-+ Windows
+- Windows
     1. Press view on the top ribbon in file explorer.
     2. Hover over show.
     3. Turn on file name extensions.
+
 - Linux
     1. Most Linux file managers already have this setup, and there are so many there's no point in listing instructions for all of theme here.
 
@@ -84,7 +86,34 @@ More info from base editor guide.
 
 ### Note Types
 
+| Note Name | Note Desc                                                                                                 | Image                                |
+| --------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| Block     | We beat these, they're the simplest note. Hit them with your paddle.                                      | ![BlockNote](pics/notes/block.png)   |
+| Hold      | Also hit these with paddles but you must keep your paddle on it for the duration of the hold.*            | ![HoldNote](pics/notes/hold.png)     |
+| Inverse   | Negative Blocks, they come from the opposite direction. You must hit it with the backside of your paddle. | ![Inverse](pics/notes/inverse.png)   |
+| Mine      | The spikey block, If you block this with your paddle, You'll get hurt. Point your paddle away from it.    | ![Mine](pics/notes/mine.png)         |
+| Mine Hold | The hold varient of a mine. It's like a mine but longer and can hurt you consecutively. don't these.      | ![MineHold](pics/notes/minehold.png) |
+| Side      | You can not hit these straight on, Strike them on their side to destory it. (Purpz's worst enemy)         | ![Side](pics/notes/side.png)         |
+| Trace     | These are not naturally available (Advanced). It creates a dithered line between 2 points.**              | ![Trace](pics/notes/trace.png)       |
+| ExtraTap  | its a tap, but not constrained to a specific note. so uh go wild (please don't i can only press z so fa-) | ![ExtraTap](pics/notes/extratap.png) |
+
+\* If you increased extraHoldLeniency (see VFX easables), Then you will be able to move your paddle without breaking the hold. 
+
+** talk to flecha da foxy for more ~ _IPz
+
 ### VFX Event Types
+
+| Event Name | Event Desc                                                                                                    | Image                            |
+| ---------- | ------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| Ease       | The world's most powerful event in the game IMO and everything in Eases can be altered with this event.       | ![Ease](pics/events/ease.png)    |
+| Decoration | Everything artwise found in charts is the responsiblity of the Deco Event. For more, Go to the Deco Section.  | ![Deco](pics/events/deco.png)    |
+| H.O.M.     | Hall of Mirrors, You know that effect when you are in the skybox outside the map? that? it's that.            | ![HOM](pics/events/mirror.png)   |
+| Noise      | It creates a Noise/Static effect, Best used with HOM to make a trailing effect with notes. Will kill bitrate  | ![Noise](pics/events/noise.png)  |
+| Bookmark   | Much like an actual bookmark, creates a pointer that you can find easily with Alt in the editor.              | ![BMark](pics/events/book.png)   |
+| Set Bool   | Sets a Boolean to either True or False. Essentially a weaker version of Ease.                                 | ![StBool](pics/events/bool.png)  |
+| Outline    | it creates an outline around Notes, Cranky, and text.                                                         | ![OTLN](pics/events/outline.png) |
+| Play Sound | Plays a sound, like any sound. as long it's in the level file or in the base game... _this aint a visual..._  | ![Sound](pics/events/psound.png) |
+| Particles  | Toggles the particles, that is all i know. If you want to help anywhere like this, please make a pull request | ![Pat](pics/events/particle.png) |
 
 ### Other Event Types (and advanced)
 
@@ -99,7 +128,7 @@ these are "caseSensitive"
 #### Standard Bools
 
 | Variable Name             | Default | Description                                                            |
-| ------------------------- | ------- | ---------------------------------------------------------------------- |
+|---------------------------|---------|------------------------------------------------------------------------|
 | vfx.hwaves.flip           | false   | Should the amplitude of hwaves flip every frame? (hwaves is easable)   |
 | vfx.notesFollowPlayer     | true    | Should notes move with the player when p.x or p.y is changed           |
 | vfx.drawCombo             | true    | Should combo be displayed?                                             |
@@ -115,7 +144,7 @@ these are "caseSensitive"
 #### Editor Only Bools (broken stuff and goofy)
 
 | Variable Name             | Default | Description                                                                                                       |
-| ------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------- |
+|---------------------------|---------|-------------------------------------------------------------------------------------------------------------------|
 | choosingVariant           | true    | Should do something?                                                                                              |
 | errorDialogue             | false   | Should the error dialogue exist? (does make _an_ error dialogue in standard play, just not the one it's meant to) |
 | levelPropertiesDialogue   | false   | Should the level properties dialogue exist?                                                                       |
@@ -135,7 +164,7 @@ these are "caseSensitive"
 #### VFX Easables
 
 | Variable Name           | Default | Description                                                                                                                   |
-| ----------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
+|-------------------------|---------|-------------------------------------------------------------------------------------------------------------------------------|
 | scrollSpeed             | 1       | Multiplies the scroll speed set in the level properties.                                                                      |
 | extraHoldLeniency       | 0       | Adds to the leniency timer for holds. (sadly can't be negative)                                                               |
 | noteRadius              | 9       | How big the hit radius for notes are. (not the same as scale)                                                                 |
@@ -187,7 +216,7 @@ these are "caseSensitive"
 #### Player Easables
 
 | Variable Name       | Default | Description                                                            |
-| ------------------- | ------- | ---------------------------------------------------------------------- |
+|---------------------|---------|------------------------------------------------------------------------|
 | p.x                 | 300     | Cranky's X pos.                                                        |
 | p.y                 | 180     | Cranky's Y pos.                                                        |
 | p.paddleDistance    | 31      | The distance between Cranky and the Paddle.                            |
@@ -214,7 +243,7 @@ these are "caseSensitive"
 ### Color Channels (and another bypass mod)
 
 | ColorChannel | DecoColor |                                |
-| ------------ | :-------: | ------------------------------ |
+|--------------|:---------:|--------------------------------|
 | 0            |  #FFFFFF  | ![white](pics/palette/w.png)   |
 | 1            |  #000000  | ![black](pics/palette/b.png)   |
 | 2            |  #FF0000  | ![red](pics/palette/r.png)     |
