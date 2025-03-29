@@ -109,13 +109,22 @@ More info from base editor guide.
 | Decoration | Everything artwise found in charts is the responsiblity of the Deco Event. For more, Go to the Deco Section.  | ![Deco](pics/events/deco.png)    |
 | H.O.M.     | Hall of Mirrors, You know that effect when you are in the skybox outside the map? that? it's that.            | ![HOM](pics/events/mirror.png)   |
 | Noise      | It creates a Noise/Static effect, Best used with HOM to make a trailing effect with notes. Will kill bitrate  | ![Noise](pics/events/noise.png)  |
-| Bookmark   | Much like an actual bookmark, creates a pointer that you can find easily with Alt in the editor.              | ![BMark](pics/events/book.png)   |
 | Set Bool   | Sets a Boolean to either True or False. Essentially a weaker version of Ease.                                 | ![StBool](pics/events/bool.png)  |
 | Outline    | it creates an outline around Notes, Cranky, and text.                                                         | ![OTLN](pics/events/outline.png) |
-| Play Sound | Plays a sound, like any sound. as long it's in the level file or in the base game... _this aint a visual..._  | ![Sound](pics/events/psound.png) |
 | Particles  | Toggles the particles, that is all i know. If you want to help anywhere like this, please make a pull request | ![Pat](pics/events/particle.png) |
+| Set Color  | Sets a certain palette value to a specific color of the charter's choice. Easable for smooth color transition | ![Color](pics/events/scolor.png) |
+| S. BGColor | Sets the background to a certain palette value.                                                               | ![BGCol](pics/events/bgcolr.png) |
+| ForcePSprt | Forces Player Sprite. It can be set to a custom sprite as well if you add it to level file.                   | ![FPS](pics/events/forceps.png)  |
+|            |                                                                                                               |                                  |
 
 ### Other Event Types (and advanced)
+
+| Event Name | Event Desc                                                                                       | Image                            |
+| ---------- | ------------------------------------------------------------------------------------------------ | -------------------------------- |
+| Play       | Plays the song audio file. Must be OGG Vorbis (.ogg) file or it won't work correctly.            | ![Play](pics/events/play.png)    |
+| Play Sound | Plays a sound, like any sound. as long it's in the level file or in the base game...             | ![Sound](pics/events/psound.png) |
+| Bookmark   | Much like an actual bookmark, creates a pointer that you can find easily with Alt in the editor. | ![BMark](pics/events/book.png)   |
+| Set BPM    | ... sets the Beats Per Minute. Please get what it is and don't set it to an arbitrary value.     | not gonna do it rn.              |
 
 ### Hotkeys
 
