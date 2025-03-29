@@ -92,7 +92,7 @@ More info from base editor guide.
 | Hold      | Also hit these with paddles but you must keep your paddle on it for the duration of the hold.*            | ![HoldNote](pics/notes/hold.png)     |
 | Inverse   | Negative Blocks, they come from the opposite direction. You must hit it with the backside of your paddle. | ![Inverse](pics/notes/inverse.png)   |
 | Mine      | The spikey block, If you block this with your paddle, You'll get hurt. Point your paddle away from it.    | ![Mine](pics/notes/mine.png)         |
-| Mine Hold | The hold varient of a mine. It's like a mine but longer and can hurt you consecutively. don't these.      | ![MineHold](pics/notes/minehold.png) |
+| Mine Hold | The hold varient of a mine. It's like a mine but longer and can hurt you consecutively. don't touch.      | ![MineHold](pics/notes/minehold.png) |
 | Side      | You can not hit these straight on, Strike them on their side to destory it. (Purpz's worst enemy)         | ![Side](pics/notes/side.png)         |
 | Trace     | These are not naturally available (Advanced). It creates a dithered line between 2 points.**              | ![Trace](pics/notes/trace.png)       |
 | ExtraTap  | its a tap, but not constrained to a specific note. so uh go wild (please don't i can only press z so fa-) | ![ExtraTap](pics/notes/extratap.png) |
