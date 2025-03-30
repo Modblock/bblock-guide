@@ -115,16 +115,15 @@ More info from base editor guide.
 | Set Color  | Sets a certain palette value to a specific color of the charter's choice. Easable for smooth color transition | ![Color](pics/events/scolor.png) |
 | S. BGColor | Sets the background to a certain palette value.                                                               | ![BGCol](pics/events/bgcolr.png) |
 | ForcePSprt | Forces Player Sprite. It can be set to a custom sprite as well if you add it to level file.                   | ![FPS](pics/events/forceps.png)  |
-|            |                                                                                                               |                                  |
 
 ### Other Event Types (and advanced)
 
-| Event Name | Event Desc                                                                                       | Image                            |
-| ---------- | ------------------------------------------------------------------------------------------------ | -------------------------------- |
-| Play       | Plays the song audio file. Must be OGG Vorbis (.ogg) file or it won't work correctly.            | ![Play](pics/events/play.png)    |
-| Play Sound | Plays a sound, like any sound. as long it's in the level file or in the base game...             | ![Sound](pics/events/psound.png) |
-| Bookmark   | Much like an actual bookmark, creates a pointer that you can find easily with Alt in the editor. | ![BMark](pics/events/book.png)   |
-| Set BPM    | ... sets the Beats Per Minute. Please get what it is and don't set it to an arbitrary value.     | not gonna do it rn.              |
+| Event Name | Event Desc                                                                                       | Image                              |
+| ---------- | ------------------------------------------------------------------------------------------------ | ---------------------------------- |
+| Play       | Plays the song audio file. Must be OGG Vorbis (.ogg) file or it won't work correctly.            | ![Play](pics/events/play.png)      |
+| Play Sound | Plays a sound, like any sound. as long it's in the level file or in the base game...             | ![Sound](pics/events/psound.png)   |
+| Bookmark   | Much like an actual bookmark, creates a pointer that you can find easily with Alt in the editor. | ![BMark](pics/events/book.png)     |
+| Set BPM    | ... sets the Beats Per Minute. Please get what it is and don't set it to an arbitrary value.     | ![Metronome](pics/events/sbpm.png) |
 
 ### Hotkeys
 
