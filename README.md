@@ -125,8 +125,22 @@ More info from base editor guide.
 | Bookmark   | Much like an actual bookmark, creates a pointer that you can find easily with Alt in the editor. | ![BMark](pics/events/book.png)     |
 | Set BPM    | ... sets the Beats Per Minute. Please get what it is and don't set it to an arbitrary value.     | ![Metronome](pics/events/sbpm.png) |
 
-### Hotkeys
+### Editor Hotkeys
 
+| Hotkey   | Purpose                | Notes                                                             |
+| -------- | ---------------------- | ----------------------------------------------------------------- |
+| P        | Play                   | Editor play is diff from playing from menu. (why some vars break) |
+| S        | Save                   | N/A                                                               |
+| alt      | Opens alternate slider | N/A                                                               |
+| ctrl + R | Resets windows         | N/A                                                               |
+| ctrl + C | Copy                   | Only in multiselect.                                              |
+| ctrl + V | Paste                  | Only in multiselect.                                              |
+| ctrl + I | Open Properties        | N/A                                                               |
+| tab      | Type playback speed    | Only when playback speed is focused.                              |
+
+> I'll let purple add more since I have optimized my workflow without hotkeys
+> (only for beatblock, I usually use hotkeys)
+> \- astro
 ## Var List
 
 ### Bools
