@@ -150,10 +150,10 @@ these are "caseSensitive"
 | paused                    | false   | Should the level be paused?                                            |
 | holdEntityDraw            | true    | Should do something with holds?                                        |
 
-#### Editor Only Bools (broken stuff and goofy)
+#### Hidden/Editor Only (broken stuff and goofy or editor only)
 
 | Variable Name             | Default | Description                                                                                                       |
-|---------------------------|---------|-------------------------------------------------------------------------------------------------------------------|
+| ------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------- |
 | choosingVariant           | true    | Should do something?                                                                                              |
 | errorDialogue             | false   | Should the error dialogue exist? (does make _an_ error dialogue in standard play, just not the one it's meant to) |
 | levelPropertiesDialogue   | false   | Should the level properties dialogue exist?                                                                       |
@@ -245,6 +245,15 @@ these are "caseSensitive"
 | p.feedbackAmplitude | 2.5     | How strong the feedback is for hitting notes with the paddle.          |
 | p.feedbackDuration  | 4       | How long the feedback for hitting with the paddle lasts.               |
 
+#### Hidden Easables
+| Variable Name | Default | Description                                   | Broken?              |
+| ------------- | ------- | --------------------------------------------- | -------------------- |
+| misses        | 0       | How many misses there are.                    | No                   |
+| maxHits       | ???     | idk, smth about forceScore, whatever that is. | Maybe                |
+| barelies      | 0       | How many barelies there are.                  | No                   |
+| voidColor     | 0       | Change the void color.                        | No                   |
+| offset        | 0       | Controls song offset.                         | Maybe                |
+| cBeat         | 0       | Set's beat(relative)                          | Kinda(breaks editor) |
 <sub/> There are text eases, more info **will** be in wiki
 
 ## Deco
