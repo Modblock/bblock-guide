@@ -28,6 +28,7 @@ More info from base editor guide.
 - [Rhythms 101](#rhythms-101)
   - [Basic Rhythms](#basic-rhythms)
   - [Weird/advanced rhythms](#weirdadvanced-rhythms)
+- [Custom Levels](#custom-levels)
 
 ## Getting Started
 
@@ -84,6 +85,9 @@ More info from base editor guide.
 
 ### Placing Notes & Events
 
+[im just gonna make a youtube tutorial]
+
+
 ### Note Types
 
 | Note Name | Note Desc                                                                                                 | Image                                |
@@ -127,20 +131,19 @@ More info from base editor guide.
 
 ### Editor Hotkeys
 
-| Hotkey   | Purpose                | Notes                                                             |
-| -------- | ---------------------- | ----------------------------------------------------------------- |
-| P        | Play                   | Editor play is diff from playing from menu. (why some vars break) |
-| S        | Save                   | N/A                                                               |
-| alt      | Opens alternate slider | N/A                                                               |
-| ctrl + R | Resets windows         | N/A                                                               |
-| ctrl + C | Copy                   | Only in multiselect.                                              |
-| ctrl + V | Paste                  | Only in multiselect.                                              |
-| ctrl + I | Open Properties        | N/A                                                               |
-| tab      | Type playback speed    | Only when playback speed is focused.                              |
+| Hotkey     | Purpose                | Notes                                                                                                                                                    |
+| ---------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| P          | Play                   | Editor play is diff from playing from menu. (why some vars break)                                                                                        |
+| S          | Save                   | Saves your chart.                                                                                                                                        |
+| alt        | Opens alternate slider | This is what [Bookmarks](#other-event-types-and-advanced) are for. The slider will be split into section using those Bookmarks as chapters essentially.  |
+| ctrl + R   | Resets windows         | Resets the editor tabs/windows to their default positions.                                                                                               |
+| ctrl + C   | Copy                   | Only in multiselect.                                                                                                                                     |
+| ctrl + V   | Paste                  | Only after Copy. Pastes on the beat your mouse is on and corresponding from pos1 when copied. Doesn't work between charts.                               |
+| ctrl + I   | Open Properties        | The one of most important keybind here and is needed to set name and difficulty of the chart.[*](#idk-why-they-dont-say-this-when-first-opening-a-chart) |
+| tab        | Type playback speed    | Only when playback speed is focused.                                                                                                                     |
+| shift + M1 | MultiSelect            | Requires to be used twice to actually function.                                                                                                          |
 
-> I'll let purple add more since I have optimized my workflow without hotkeys
-> (only for beatblock, I usually use hotkeys)
-> \- astro
+> * ###### IDK why they don't say this when first opening a chart.
 ## Var List
 
 ### Bools
@@ -316,6 +319,16 @@ All images you want to use must operate within the [8 color channel limit](#colo
 
 ## Rhythms 101
 
+> im letting astro do this shenangains. - ~~puurz~~ spurpz
+
 ### Basic Rhythms
 
 ### Weird/advanced rhythms
+
+## Custom Levels
+
+### Where to Get them
+You can get custom levels from The [*Beatblock Browser*](https://beatblockbrowser.me/) and get WIP levels and others straight from the [_Cranky's Customs Discord Server_](https://discord.gg/sSC6RcXXm2). 
+
+### How to import the custom levels 
+The simple part, to import your Custom Levels you can either drag them into your 
