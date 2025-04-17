@@ -294,25 +294,25 @@ If you wish to bypass this color limit, I would recommend using the ["Colorful!"
 
 ### Deco Properties
 
-| Property Name     | Use                                                                                                                                                                         |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| order             | Sets order of priority for the <ins>deco event itself.</ins> <br/> Helpful for events running on the same beat that alter different properties & easings for the same deco. |
-| id                | Allows you to assign and call IDs associated with a deco, making it easier o modify specific deco events without re-adding input for the *sprite* property.                 |
-| sprite            | Controls what image/animation file the deco uses (via filename entry) (if left blank, you get the bubbletabby cat.)                                                         |
-| parentid          | Unique ID for the parent deco (@player parents to cranky) (if ID is nonexistent, deco will have no parent)                                                                  |
-| rotationinfluence | How much the parent rotation influences the child deco.                                                                                                                     |
-| orbit             | When turned on, it will only rotate position, the angle will be unchanged.                                                                                                  |
-| x/y               | X & Y positions relative to the screen, 0/0 is left/top, 300/180 is right/bottom.                                                                                           |
-| r                 | (Base) rotation Angle                                                                                                                                                       |
-| sx/sy             | Scale along the X/Y plane 1/1 is standard, 1.5/1.5 is scaled out, 1.5/1 is stretched out along X.                                                                           |
-| ox/oy             | Offsets the center point of the deco that rotation, scale, and skew are based on. By default located at top-left pixel.                                                     |
-| drawLayer         | Assigns decos to render on fg, bg, or onTop. (onTop is nonfunctional, if it was it would be unnafected by VFX)                                                              |
-| drawOrder         | Further sorts deco within same layer                                                                                                                                        |
-| recolor           | Display the deco as a single solid color.                                                                                                                                   |
-| outline           | Toggles whether the outline VFX event applies to this deco.                                                                                                                 |
-| hide              | Toggles whether deco is hidden.                                                                                                                                             |
-| duration          | <ins>Not applicable for deco creation events.</ins> Sets the duration for given transformations to apply.                                                                   |
-| ease              | <ins>Not applicable for deco creation events.</ins> Sets the easing for the given values with the given duration.                                                           |
+| Property Name     | Use                                                                                                                                                                                      |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| order             | Sets order of priority for the <ins>deco event itself.</ins> <br/> Helpful for events running on the same beat that alter different properties & easings for the same deco.              |
+| id                | Allows you to assign and call IDs associated with a deco, making it easier o modify specific deco events without re-adding input for the *sprite* property.                              |
+| sprite            | Controls what image/animation file the deco uses (via filename entry) (if left blank, you get the bubbletabby cat.) [For sprite properties, go to the Deco section.](#sprite-properties) |
+| parentid          | Unique ID for the parent deco (@player parents to cranky) (if ID is nonexistent, deco will have no parent)                                                                               |
+| rotationinfluence | How much the parent rotation influences the child deco. Please remember to set the value if you are are parenting to Cranky                                                              |
+| orbit             | When turned on, it will only rotate position, the angle will be unchanged.                                                                                                               |
+| x/y               | X & Y positions relative to the screen, 0/0 is left/top, 300/180 is right/bottom.                                                                                                        |
+| r                 | (Base) rotation Angle                                                                                                                                                                    |
+| sx/sy             | Scale along the X/Y plane 1/1 is standard, 1.5/1.5 is scaled out, 1.5/1 is stretched out along X.                                                                                        |
+| ox/oy             | Offsets the center point of the deco that rotation, scale, and skew are based on. By default located at top-left pixel.                                                                  |
+| drawLayer         | Assigns decos to render on fg, bg, or onTop. (onTop is nonfunctional, if it was it would be unnafected by VFX)                                                                           |
+| drawOrder         | Further sorts deco within same layer                                                                                                                                                     |
+| recolor           | Display the deco as a single solid color.                                                                                                                                                |
+| outline           | Toggles whether the outline VFX event applies to this deco.                                                                                                                              |
+| hide              | Toggles whether deco is hidden.                                                                                                                                                          |
+| duration          | <ins>Not applicable for deco creation events.</ins> Sets the duration for given transformations to apply.                                                                                |
+| ease              | <ins>Not applicable for deco creation events.</ins> Sets the easing for the given values with the given duration.                                                                        |
 
 ### Still Decos
 
@@ -320,9 +320,67 @@ All images you want to use must operate within the [8 color channel limit](#colo
 
 ### Animated Decos
 
+Animated Deco is a spritesheet of an animation that must comply to the [8 color channel limit](#color-channels-and-another-bypass-mod) much like the normal still decos.
+An example of a spritesheet looks like such.
+
+| ![decoexample](pics/examples/earthwater-old.png) |
+| - |
+
+The spritesheet requires a JSON file with the same name as the spritesheet file for the game to actually interpet the spritesheet correctly.
+Spritesheet is also indexed start from 0. i.e. if your animation has 16 frames, it will be indexed from 0-15.
+
+#### Json Properties
+| properties | description                                                                                 | optional? |
+| ---------- | ------------------------------------------------------------------------------------------- | --------- |
+| width      | The width of one of the sprite's frames.                                                    | No.       |
+| height     | The height of one of the sprite's frames.                                                   | No.       |
+| fps        | The frames per second of the animation. By default it's 60fps                               | No.       |
+| frames     | The amount of frames of the animation, needed if the animation has empty frames at the end. | Yes.      |
+| loop       | Loops the animation - Boolean                                                               | Yes.      |
+| states     | The states of the animation, i.e. if you want a reversed verison of the animation.          | Yes.      |
+
+An example of a JSON file will be used with the previous example image.
+
+```
+{
+    "width": 600,
+    "height": 300,
+    "fps": 5,
+    "frames": 5,
+    "loop": true
+    "states": [
+      {
+        "name": "Reverse",
+        "frames": [
+          4,
+          3,
+          2,
+          1,
+          0
+        ]
+      }
+    ]
+}
+```
+
+#### Sprite Properties
+Animated Deco gets called in the Deco event in certain ways.
+| Sprite Property          | Description                                                               |
+| ------------------------ | ------------------------------------------------------------------------- |
+| [SPRITE]                 | loads the sprite according to the json file, won't load if there is none. |
+| [SPRITE].png             | Just loads the spritesheet as is, Not the animation.                      |
+| [SPRITE]!state           | Loads a state of the animation                                            |
+| [SPRITE]#frame           | Loads the frame specific frame number                                     |
+| [SPRITE]@fps             | Loads the animation at a new fps that overrides the one in the json file. |
+| [SPRITE]!state@fps       | Does what @fps does but in a specific state.                              |
+| [SPRITE]!state#frame     | Does what #frame does but in a specific state.                            |
+| [SPRITE]!state#frame@fps | I don't think i have to explain what this does.                           |
+
+Side note: Only use .png for stationary deco.
+
 ## Rhythms 101
 
-> im letting astro do this shenangains. - ~~puurz~~ spurpz
+> im letting astro do this shenangains. - ~~puurz~~ purpz
 
 ### Basic Rhythms
 
