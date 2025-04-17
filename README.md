@@ -10,16 +10,17 @@ More info from base editor guide.
   - [Issues with Importing Songs](#issues-with-importing-songs)
   - [Placing Notes \& Events](#placing-notes--events)
   - [Note Types](#note-types)
-  - [VFX Event Types](#vfx-event-types)
-  - [Other Event Types (and advanced)](#other-event-types-and-advanced)
-  - [Hotkeys](#hotkeys)
+    - [VFX Event Types](#vfx-event-types)
+    - [Other Event Types (and advanced)](#other-event-types-and-advanced)
+  - [Editor Hotkeys](#editor-hotkeys)
 - [Var List](#var-list)
   - [Bools](#bools)
     - [Standard Bools](#standard-bools)
-    - [Editor Only Bools (broken stuff and goofy)](#editor-only-bools-broken-stuff-and-goofy)
+    - [Hidden/Editor Only Bools)](#hiddeneditor-only-broken-stuff-and-goofy-or-editor-only)
   - [Eases](#eases)
     - [VFX Easables](#vfx-easables)
     - [Player Easables](#player-easables)
+    - [Hidden Easables](#hidden-easables)
 - [Deco](#deco)
   - [Color Channels (and another bypass mod)](#color-channels-and-another-bypass-mod)
   - [Deco Properties](#deco-properties)
@@ -29,6 +30,8 @@ More info from base editor guide.
   - [Basic Rhythms](#basic-rhythms)
   - [Weird/advanced rhythms](#weirdadvanced-rhythms)
 - [Custom Levels](#custom-levels)
+  - [Where to Get them](#where-to-get-them)
+  - [How to import the custom levels](#how-to-import-the-custom-levels)
 
 ## Getting Started
 
@@ -153,7 +156,7 @@ these are "caseSensitive"
 #### Standard Bools
 
 | Variable Name             | Default | Description                                                            |
-|---------------------------|---------|------------------------------------------------------------------------|
+| ------------------------- | ------- | ---------------------------------------------------------------------- |
 | vfx.hwaves.flip           | false   | Should the amplitude of hwaves flip every frame? (hwaves is easable)   |
 | vfx.notesFollowPlayer     | true    | Should notes move with the player when p.x or p.y is changed           |
 | vfx.drawCombo             | true    | Should combo be displayed?                                             |
@@ -189,7 +192,7 @@ these are "caseSensitive"
 #### VFX Easables
 
 | Variable Name           | Default | Description                                                                                                                   |
-|-------------------------|---------|-------------------------------------------------------------------------------------------------------------------------------|
+| ----------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | scrollSpeed             | 1       | Multiplies the scroll speed set in the level properties.                                                                      |
 | extraHoldLeniency       | 0       | Adds to the leniency timer for holds. (sadly can't be negative)                                                               |
 | noteRadius              | 9       | How big the hit radius for notes are. (not the same as scale)                                                                 |
@@ -241,7 +244,7 @@ these are "caseSensitive"
 #### Player Easables
 
 | Variable Name       | Default | Description                                                            |
-|---------------------|---------|------------------------------------------------------------------------|
+| ------------------- | ------- | ---------------------------------------------------------------------- |
 | p.x                 | 300     | Cranky's X pos.                                                        |
 | p.y                 | 180     | Cranky's Y pos.                                                        |
 | p.paddleDistance    | 31      | The distance between Cranky and the Paddle.                            |
@@ -277,7 +280,7 @@ these are "caseSensitive"
 ### Color Channels (and another bypass mod)
 
 | ColorChannel | DecoColor |                                |
-|--------------|:---------:|--------------------------------|
+| ------------ | :-------: | ------------------------------ |
 | 0            |  #FFFFFF  | ![white](pics/palette/w.png)   |
 | 1            |  #000000  | ![black](pics/palette/b.png)   |
 | 2            |  #FF0000  | ![red](pics/palette/r.png)     |
@@ -331,4 +334,18 @@ All images you want to use must operate within the [8 color channel limit](#colo
 You can get custom levels from The [*Beatblock Browser*](https://beatblockbrowser.me/) and get WIP levels and others straight from the [_Cranky's Customs Discord Server_](https://discord.gg/sSC6RcXXm2). 
 
 ### How to import the custom levels 
-The simple part, to import your Custom Levels you can either drag them into your 
+The simple part, to import your Custom Levels you can either drag them into your beatblock window when in the custom levels screen or inserting the level folder manually in your file explorer.
+You can find the file directory under by opening in Beatblock or by navigation to any of these directories below.
+
+| OS      | Directory                                                                        |
+| ------- | -------------------------------------------------------------------------------- |
+| Windows | `%appdata%/Beatblock/Custom Levels` or `C:\Users\USER\AppData\Roaming\beatblock` |
+| MacOS   | `~/Library/Application Support/Beatblock/Custom Levels`                          |
+| Linux   | <ASTRO DO THIS I DON'T REMEMBER>                                                 |
+
+### How to export a custom level
+
+The process is quite similar to importing.
+Go to your `Custom Levels` folder and identify the Level you are going to be exporting.
+Compress it into either a `.zip` (preferred) or a `.7z` file.
+Once done, you can upload it on the [*Beatblock Browser*](https://beatblockbrowser.me/) if the file is less than 2mb or on the [Discord Server](https://discord.gg/sSC6RcXXm2) if bigger.
