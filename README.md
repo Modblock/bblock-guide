@@ -399,7 +399,7 @@ You can find the file directory under by opening in Beatblock or by navigation t
 | ------- | -------------------------------------------------------------------------------- |
 | Windows | `%appdata%/Beatblock/Custom Levels` or `C:\Users\USER\AppData\Roaming\beatblock` |
 | MacOS   | `~/Library/Application Support/Beatblock/Custom Levels`                          |
-| Linux   | <ASTRO DO THIS I DON'T REMEMBER>                                                 |
+| Linux   | <ASTRO DO THIS I DON'T REMEMBER> <astro: It changes, I can't give one answer>    |
 
 ### How to export a custom level
 
