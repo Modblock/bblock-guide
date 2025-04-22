@@ -380,11 +380,21 @@ Side note: Only use .png for stationary deco.
 
 ## Rhythms 101
 
-> im letting astro do this shenangains. - ~~puurz~~ purpz
+Explaining rhythms with text is hard, so I might try to find a better way to implement it here.
+\- astro
 
 ### Basic Rhythms
 
+Basic rhythms tend to fall within the 1/4 beat division, I can only really explain in text with music theory, so quarter notes are on the beat, eighth notes are perfectly in the middle of the beat and on the beat, sixteenth notes are on all 4 lines per beat.
+
 ### Weird/advanced rhythms
+#### Triplets
+
+Triplets take place within the 1/3, 1/6, and 1/12 beat subdivisions, eighth note triplets take place in 1/3, sixteenth note triplets take place in 1/6 and then 32nd note triplets are in 1/12.  Quarter note triplets are a little weird, you need to go into 1/3, place one at the starting place, and then place a note on every other rhythm snap after that(idk what they're called).
+#### Swung rhythms
+
+For eighth note swing, place a note on a beat, skip a snap on 1/6, place notes on the next two, skip a snap, and then loop the last 2 instructions.
+For sixteenth note swing, do those same steps but on 1/12.
 
 ## Custom Levels
 
@@ -395,11 +405,11 @@ You can get custom levels from The [*Beatblock Browser*](https://beatblockbrowse
 The simple part, to import your Custom Levels you can either drag them into your beatblock window when in the custom levels screen or inserting the level folder manually in your file explorer.
 You can find the file directory under by opening in Beatblock or by navigation to any of these directories below.
 
-| OS      | Directory                                                                        |
-| ------- | -------------------------------------------------------------------------------- |
-| Windows | `%appdata%/Beatblock/Custom Levels` or `C:\Users\USER\AppData\Roaming\beatblock` |
-| MacOS   | `~/Library/Application Support/Beatblock/Custom Levels`                          |
-| Linux   | <ASTRO DO THIS I DON'T REMEMBER> <astro: It changes, I can't give one answer>    |
+| OS      | Directory                                                                           |
+| ------- | ----------------------------------------------------------------------------------- |
+| Windows | `%appdata%/Beatblock/Custom Levels` or `C:\Users\USER\AppData\Roaming\beatblock`    |
+| MacOS   | `~/Library/Application Support/Beatblock/Custom Levels`                             |
+| Linux   | Depends on distro and install method, so your on your own, srry. |
 
 ### How to export a custom level
 
