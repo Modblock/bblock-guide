@@ -155,19 +155,26 @@ these are "caseSensitive"
 
 #### Standard Bools
 
-| Variable Name             | Default | Description                                                            |
-| ------------------------- | ------- | ---------------------------------------------------------------------- |
-| vfx.hwaves.flip           | false   | Should the amplitude of hwaves flip every frame? (hwaves is easable)   |
-| vfx.notesFollowPlayer     | true    | Should notes move with the player when p.x or p.y is changed           |
-| vfx.drawCombo             | true    | Should combo be displayed?                                             |
-| vfx.drawAccuracy          | true    | Should accuracy be displayed in expanded hud?                          |
-| vfx.drawSongTitle         | true    | Should song title be displayed in expanded hud?                        |
-| vfx.drawUI                | true    | Should UI be displayed? (has priority over draw vars)                  |
-| vfx.ignoreNoiseCorrection | false   | Should the alternate noise calculation methode be used?                |
-| exitingLevel              | false   | Should the level end on pause-resume or beat 0 if placed in load beat? |
-| vfx.calibration           | false   | Should the level use calibration system?                               |
-| paused                    | false   | Should the level be paused?                                            |
-| holdEntityDraw            | true    | Should do something with holds?                                        |
+| Variable Name             | Default                                              | Description                                                            |
+| ------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------- |
+| paused                    | false                                                | Should the level be paused?                                            |
+| holdEntityDraw            | true                                                 | Should do something with holds?                                        |
+| newHoldDetection          | true                                                 | If hold's use the new hold detection system (info somewhere here)      |
+| vfx.hwaves.flip           | false                                                | Should the amplitude of hwaves flip every frame? (hwaves is easable)   |
+| vfx.notesFollowPlayer     | true                                                 | Should notes move with the player when p.x or p.y is changed           |
+| vfx.drawCombo             | true                                                 | Should combo be displayed?                                             |
+| vfx.drawAccuracy          | true                                                 | Should accuracy be displayed in expanded hud?                          |
+| vfx.drawSongTitle         | true                                                 | Should song title be displayed in expanded hud?                        |
+| vfx.drawUI                | true                                                 | Should UI be displayed? (has priority over draw vars)                  |
+| vfx.ignoreNoiseCorrection | false                                                | Should the alternate noise calculation methode be used?                |
+| exitingLevel              | false                                                | Should the level end on pause-resume or beat 0 if placed in load beat? |
+| vfx.calibration           | false                                                | Should the level use calibration system?                               |
+|                           |                                                      |                                                                        |
+|                           | From this point down is early access and later only. |                                                                        |
+|                           |                                                      |                                                                        |
+| vfx.darkness.enabled      | false                                                | Sets whether darkness is enabled or disabled.                          |
+| vfx.onTopUI               | true                                                 | If false, UI gets affected by VFX.                                     |
+| p.disableCostume          | false                                                | If true, the player no longer has a costume enabled.                   |
 
 #### Hidden/Editor Only (broken stuff and goofy or editor only)
 
@@ -191,55 +198,69 @@ these are "caseSensitive"
 
 #### VFX Easables
 
-| Variable Name           | Default | Description                                                                                                                   |
-| ----------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| scrollSpeed             | 1       | Multiplies the scroll speed set in the level properties.                                                                      |
-| extraHoldLeniency       | 0       | Adds to the leniency timer for holds. (sadly can't be negative)                                                               |
-| noteRadius              | 9       | How big the hit radius for notes are. (not the same as scale)                                                                 |
-| objectRotation          | 0       | Rotates all of the notes by a certain rotation.                                                                               |
-| vfx.noteXScale          | 1       | Scales notes along X axis.                                                                                                    |
-| vfx.noteYscale          | 1       | Scales notes along Y axis.                                                                                                    |
-| vfx.noteXSkew           | 0       | Skews notes along X axis.                                                                                                     |
-| vfx.noteYSkew           | 0       | Skews notes along Y axis.                                                                                                     |
-| vfx.extraTapWidth       | 2       | Default line thickness for Extra Taps.                                                                                        |
-| vfx.extraTapWidthPulse  | 3       | Line thickness for Extra Taps on pulses.                                                                                      |
-| vfx.tapPulsePeriod      | 1       | How often taps should pulse.                                                                                                  |
-| vfx.tapPulseStrength    | 1.5     | How much taps should grow by on pulses.                                                                                       |
-| vfx.tapWidthPulse       | 3       | Line thickness for taps on pulses.                                                                                            |
-| vfx.angleTwist.offset   | 0       | How much angles should be offset by at the specified distance.                                                                |
-| vfx.angleTwist.distance | 8       | How far away angles should be offset from.                                                                                    |
-| vfx.hglitch.strength    | 0       | How many pixels in either direction hglitch can shift.                                                                        |
-| vfx.hglitch.resolution  | 3       | How tall in pixels hglitch "chunks" should be.                                                                                |
-| vfx.hwaves.strength     | 0       | Controls the amplitude of the screen waves.                                                                                   |
-| vfx.hwaves.offset       | 0       | How offset the waves should be.                                                                                               |
-| vfx.hwaves.offsetDelta  | 0       | How much the offset should be changed ever frame.                                                                             |
-| vfx.pixelate            | 1       | How pixelated the screen should be.                                                                                           |
-| vfx.holdSegmentLimit    | 0       | How many segments every hold should have. (0 to disable)                                                                      |
-| vfx.bgNoise             | 0       | Allows easing of the Noise event's "chance" variable.                                                                         |
-| vfx.canvPos.x           | 300     | What X position the main game canvas should be drawn at.                                                                      |
-| vfx.canvPos.y           | 180     | What Y position the main game canvas should be drawn at.                                                                      |
-| vfx.canvPos.r           | 0       | How many degrees to rotate the main canvas.                                                                                   |
-| vfx.canvPos.sx          | 1       | Scales the main game canvas hoizontally.                                                                                      |
-| vfx.canvPos.sy          | 1       | Scales the main game canvas vertically.                                                                                       |
-| vfx.canvPos.ox          | 300     | What X offset the main game canvas should be drawn at.                                                                        |
-| vfx.canvPos.oy          | 180     | What Y offset the main game canvas should be drawn at.                                                                        |
-| vfx.canvPos.kx          | 0       | Skews the main game canvas along the X axis.                                                                                  |
-| vfx.canvPos.ky          | 0       | Skews the main game canvas along the Y axis.                                                                                  |
-| vfx.comboX              | 0       | What X Position the combo counter should be drawn at.                                                                         |
-| vfx.comboY              | 0       | What Y Position the combo counter should be drawn at.                                                                         |
-| vfx.accuracyX           | 0       | What X position the accuracy should be drawn at.                                                                              |
-| vfx.accuracyY           | 0       | What Y position the accuracy should be drawn at.                                                                              |
-| vfx.songName.X          | 0       | You get it.                                                                                                                   |
-| vfx.songName.Y          | 0       | You get it.                                                                                                                   |
-| vfx.difficultyX         | 0       | You get it.                                                                                                                   |
-| vfx.difficultyY         | 0       | You get it.                                                                                                                   |
-| vfx.uiColor             | 1       | Change color channel UI uses. int(0-7)                                                                                        |
-| vfx.glitchUIElements    | 0       | Glitches UI Elements: <br/> 0 - None, <br/> 1 - Combo, <br/> 2 - Combo + Acc, <br/> 3 - Combo + Acc + SongName, <br/> 4 - All |
-| vfx.hueShift            | 0       | Shift the hue of the level by given amount.                                                                                   |
-| vfx.flashStrength       | 0       | How much the screen flash is visible at given time.                                                                           |
-| vfx.flashColor.r        | 0       | Adjusts red value of screen flash.<br/> Integers [0-255] only                                                                 |
-| vfx.flashColor.g        | 0       | Adjusts green value of screen flash.<br/> Integers [0-255] only                                                               |
-| vfx.flashColor.b        | 0       | Adjusts blue value of screen flash. <br/> do i even have to say it anymore?                                                   |
+| Variable Name                | Default | Description                                                                                                                   |
+| ---------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| scrollSpeed                  | 1       | Multiplies the scroll speed set in the level properties.                                                                      |
+| extraHoldLeniency            | 0       | Adds to the leniency timer for holds. (sadly can't be negative)                                                               |
+| noteRadius                   | 9       | How big the hit radius for notes are. (not the same as scale)                                                                 |
+| objectRotation               | 0       | Rotates all of the notes by a certain rotation.                                                                               |
+| vfx.noteXScale               | 1       | Scales notes along X axis.                                                                                                    |
+| vfx.noteYscale               | 1       | Scales notes along Y axis.                                                                                                    |
+| vfx.noteXSkew                | 0       | Skews notes along X axis.                                                                                                     |
+| vfx.noteYSkew                | 0       | Skews notes along Y axis.                                                                                                     |
+| vfx.extraTapWidth            | 2       | Default line thickness for Extra Taps.                                                                                        |
+| vfx.extraTapWidthPulse       | 3       | Line thickness for Extra Taps on pulses.                                                                                      |
+| vfx.tapPulsePeriod           | 1       | How often taps should pulse.                                                                                                  |
+| vfx.tapPulseStrength         | 1.5     | How much taps should grow by on pulses.                                                                                       |
+| vfx.tapWidthPulse            | 3       | Line thickness for taps on pulses.                                                                                            |
+| vfx.angleTwist.offset        | 0       | How much angles should be offset by at the specified distance.                                                                |
+| vfx.angleTwist.distance      | 8       | How far away angles should be offset from.                                                                                    |
+| vfx.hglitch.strength         | 0       | How many pixels in either direction hglitch can shift.                                                                        |
+| vfx.hglitch.resolution       | 3       | How tall in pixels hglitch "chunks" should be.                                                                                |
+| vfx.hwaves.strength          | 0       | Controls the amplitude of the screen waves.                                                                                   |
+| vfx.hwaves.offset            | 0       | How offset the waves should be.                                                                                               |
+| vfx.hwaves.offsetDelta       | 0       | How much the offset should be changed ever frame.                                                                             |
+| vfx.pixelate                 | 1       | How pixelated the screen should be.                                                                                           |
+| vfx.holdSegmentLimit         | 0       | How many segments every hold should have. (0 to disable)                                                                      |
+| vfx.bgNoise                  | 0       | Allows easing of the Noise event's "chance" variable.                                                                         |
+| vfx.canvPos.x                | 300     | What X position the main game canvas should be drawn at.                                                                      |
+| vfx.canvPos.y                | 180     | What Y position the main game canvas should be drawn at.                                                                      |
+| vfx.canvPos.r                | 0       | How many degrees to rotate the main canvas.                                                                                   |
+| vfx.canvPos.sx               | 1       | Scales the main game canvas hoizontally.                                                                                      |
+| vfx.canvPos.sy               | 1       | Scales the main game canvas vertically.                                                                                       |
+| vfx.canvPos.ox               | 300     | What X offset the main game canvas should be drawn at.                                                                        |
+| vfx.canvPos.oy               | 180     | What Y offset the main game canvas should be drawn at.                                                                        |
+| vfx.canvPos.kx               | 0       | Skews the main game canvas along the X axis.                                                                                  |
+| vfx.canvPos.ky               | 0       | Skews the main game canvas along the Y axis.                                                                                  |
+| vfx.comboX                   | 0       | What X Position the combo counter should be drawn at.                                                                         |
+| vfx.comboY                   | 0       | What Y Position the combo counter should be drawn at.                                                                         |
+| vfx.accuracyX                | 0       | What X position the accuracy should be drawn at.                                                                              |
+| vfx.accuracyY                | 0       | What Y position the accuracy should be drawn at.                                                                              |
+| vfx.songName.X               | 0       | You get it.                                                                                                                   |
+| vfx.songName.Y               | 0       | You get it.                                                                                                                   |
+| vfx.difficultyX              | 0       | You get it.                                                                                                                   |
+| vfx.difficultyY              | 0       | You get it.                                                                                                                   |
+| vfx.uiColor                  | 1       | Change color channel UI uses. int(0-7)                                                                                        |
+| vfx.glitchUIElements         | 0       | Glitches UI Elements: <br/> 0 - None, <br/> 1 - Combo, <br/> 2 - Combo + Acc, <br/> 3 - Combo + Acc + SongName, <br/> 4 - All |
+| vfx.hueShift                 | 0       | Shift the hue of the level by given amount.                                                                                   |
+| vfx.flashStrength            | 0       | How much the screen flash is visible at given time.                                                                           |
+| vfx.flashColor.r             | 0       | Adjusts red value of screen flash.<br/> Integers [0-255] only                                                                 |
+| vfx.flashColor.g             | 0       | Adjusts green value of screen flash.<br/> Integers [0-255] only                                                               |
+| vfx.flashColor.b             | 0       | Adjusts blue value of screen flash. <br/> do i even have to say it anymore?                                                   |
+| vfx.noteRotate               | 0       | Simply rotates the notes by whatever value you. input.                                                                        |
+| vfx.bgNoiseTimeStep          | 0       | Adjust update rate of bgNoise.                                                                                                |
+|                              |         |                                                                                                                               |
+|                              |         | From this point down is early access and later only.                                                                          |
+|                              |         |                                                                                                                               |
+| bounceHeight                 | 1       | Base bounce height multiplier for bounce notes.                                                                               |
+| vfx.bgNoisePixelate          | 1       | How much to pixelate bgNoise.                                                                                                 |
+| vfx.fisheye.strength         | 1       | Fisheye shader strength.                                                                                                      |
+| vfx.fisheye.x                | 1       | x value of fisheye shader.                                                                                                    |
+| vfx.fisheye.sx               | 1       | x scale of fisheye shader.                                                                                                    |
+| vfx.fisheye.sy               | 1       | y scale of fisheye                                                                                                            |
+| vfx.fisheye.scale            | 1       | General fisheye shader scale.                                                                                                 |
+| vfx.darkness.color           | 0       | Color channel of darkness.                                                                                                    |
+| vfx.darkness.noteLightRadius | 24      | Controls the light radius of objects producing light in darkness.                                                             |
 
 #### Player Easables
 
@@ -263,6 +284,10 @@ these are "caseSensitive"
 | p.maxBodyPulse      | 0.2     | How stong the pulse from missing a note is.                            |
 | p.feedbackAmplitude | 2.5     | How strong the feedback is for hitting notes with the paddle.          |
 | p.feedbackDuration  | 4       | How long the feedback for hitting with the paddle lasts.               |
+|                     |         |                                                                        |
+|                     |         | From this point down is early access and later only.                   |
+|                     |         |                                                                        |
+| p.lightRad          | 64      | Radius of light around cranky when bool `vfx.darkness.color` is true   |
 
 #### Hidden Easables
 | Variable Name | Default | Description                                   | Broken?              |
@@ -417,3 +442,35 @@ The process is quite similar to importing.
 Go to your `Custom Levels` folder and identify the Level you are going to be exporting.
 Compress it into either a `.zip` (preferred) or a `.7z` file.
 Once done, you can upload it on the [*Beatblock Browser*](https://beatblockbrowser.me/) if the file is less than 2mb or on the [Discord Server](https://discord.gg/sSC6RcXXm2) if bigger.
+
+
+## Technical Notes on early access versions
+<sub> [Official technical notes for those who are interested](https://docs.google.com/document/d/1MiFn-mzv8NbKYYSU0lSAbWsx_wjX6T3rmNaB8YXMYJI/edit?tab=t.0#heading=h.iwe9192ot2qi)
+
+### Format Updates
+
+The level format got updated from 0.6.0, so here's the new formatversions, rewritten by astro: <br/>
+- v15: eight color canvas support
+  - The formula used to calculate canvas color swaps now supports all 8 channels
+  - It also uses RGB instead of just R now.
+  - For backwards compatibility purposes, if the game loads a level made in ≤v14 that used effectCanvas, the following boolean is true: `vfx.effectCanvas.oldColors`
+- v16: paddle event moved to chart instead of level
+  - Paddle events ≤v15 have the following event set to true: `forceStoreInLevel`, this means they retain old behaviour.
+  - If not wanted, you can pretty easily replace this in the `JSON` file
+- v17: Add funtionality to effectCanvasRaw, forcing it on in old decos
+  - Effect canvas decos can now have their colors overwritten by the level.
+  - `effectCanvasRaw` has now been set to true on all decos created before this change.
+
+### Holds
+
+> Holds
+> Ok lets all admit that the amount of time that you could be off of a hold was a little bit silly.
+> 
+> So we changed that! Holds now “die” faster the further away you are from them, but increased leniency has been added for cases where they are moving fast. Tricks like spinning the paddle 360 degrees are still possible, but a lot harder to pull off. For custom levels that relied on the old behavior, they should be updated to set the newHoldDetection boolean to false.
+\- DPS2004
+
+<sub> I just stole this section from the official technical notes, I didn't feel like trying to summarise this
+
+### New eases and booleans
+They're added to the table in the same commit [this section](#technical-notes-on-early-access-versions) is being addded, but here's the exerpt from the [official technical notes](https://docs.google.com/document/d/1MiFn-mzv8NbKYYSU0lSAbWsx_wjX6T3rmNaB8YXMYJI/edit?tab=t.0#heading=h.iwe9192ot2qi) anyways.
+
