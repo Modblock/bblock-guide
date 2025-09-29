@@ -32,6 +32,10 @@ More info from base editor guide.
 - [Custom Levels](#custom-levels)
   - [Where to Get them](#where-to-get-them)
   - [How to import the custom levels](#how-to-import-the-custom-levels)
+- [Technical Notes on Early Access Versions](#technical-notes-on-early-access-versions)
+  - [Format Updates](#format-updates)
+  - [Holds](#holds)
+  - [New Eases and Booleans](#new-eases-and-booleans)
 
 ## Getting Started
 
@@ -103,6 +107,7 @@ More info from base editor guide.
 | Side      | You can not hit these straight on, Strike them on their side to destory it. (Purpz's worst enemy)         | ![Side](pics/notes/side.png)         |
 | Trace     | These are not naturally available (Advanced). It creates a dithered line between 2 points.**              | ![Trace](pics/notes/trace.png)       |
 | ExtraTap  | its a tap, but not constrained to a specific note. so uh go wild (please don't i can only press z so fa-) | ![ExtraTap](pics/notes/extratap.png) |
+| Bounce    | A note that bounces off the paddle, useful for repeated notes with the same amount of time in between.    | ![Bounce](pics/notes/bounce.png)     |
 
 \* If you increased extraHoldLeniency (see VFX easables), Then you will be able to move your paddle without breaking the hold. 
 
