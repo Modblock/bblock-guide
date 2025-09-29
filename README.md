@@ -155,26 +155,26 @@ these are "caseSensitive"
 
 #### Standard Bools
 
-| Variable Name             | Default                                              | Description                                                            |
-| ------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------- |
-| paused                    | false                                                | Should the level be paused?                                            |
-| holdEntityDraw            | true                                                 | Should do something with holds?                                        |
-| newHoldDetection          | true                                                 | If hold's use the new hold detection system (info somewhere here)      |
-| vfx.hwaves.flip           | false                                                | Should the amplitude of hwaves flip every frame? (hwaves is easable)   |
-| vfx.notesFollowPlayer     | true                                                 | Should notes move with the player when p.x or p.y is changed           |
-| vfx.drawCombo             | true                                                 | Should combo be displayed?                                             |
-| vfx.drawAccuracy          | true                                                 | Should accuracy be displayed in expanded hud?                          |
-| vfx.drawSongTitle         | true                                                 | Should song title be displayed in expanded hud?                        |
-| vfx.drawUI                | true                                                 | Should UI be displayed? (has priority over draw vars)                  |
-| vfx.ignoreNoiseCorrection | false                                                | Should the alternate noise calculation methode be used?                |
-| exitingLevel              | false                                                | Should the level end on pause-resume or beat 0 if placed in load beat? |
-| vfx.calibration           | false                                                | Should the level use calibration system?                               |
-|                           |                                                      |                                                                        |
-|                           | From this point down is early access and later only. |                                                                        |
-|                           |                                                      |                                                                        |
-| vfx.darkness.enabled      | false                                                | Sets whether darkness is enabled or disabled.                          |
-| vfx.onTopUI               | true                                                 | If false, UI gets affected by VFX.                                     |
-| p.disableCostume          | false                                                | If true, the player no longer has a costume enabled.                   |
+| Variable Name             | Default                                              | Description                                                                |
+| ------------------------- | ---------------------------------------------------- | -------------------------------------------------------------------------- |
+| paused                    | false                                                | Should the level be paused?                                                |
+| holdEntityDraw            | true                                                 | Should do something with holds?                                            |
+| vfx.hwaves.flip           | false                                                | Should the amplitude of hwaves flip every frame? (hwaves is easable)       |
+| vfx.notesFollowPlayer     | true                                                 | Should notes move with the player when p.x or p.y is changed               |
+| vfx.drawCombo             | true                                                 | Should combo be displayed?                                                 |
+| vfx.drawAccuracy          | true                                                 | Should accuracy be displayed in expanded hud?                              |
+| vfx.drawSongTitle         | true                                                 | Should song title be displayed in expanded hud?                            |
+| vfx.drawUI                | true                                                 | Should UI be displayed? (has priority over draw vars)                      |
+| vfx.ignoreNoiseCorrection | false                                                | Should the alternate noise calculation methode be used?                    |
+| exitingLevel              | false                                                | Should the level end on pause-resume or beat 0 if placed in load beat?     |
+| vfx.calibration           | false                                                | Should the level use calibration system?                                   |
+|                           |                                                      |                                                                            |
+|                           | From this point down is early access and later only. |                                                                            |
+|                           |                                                      |                                                                            |
+| newHoldDetection          | true                                                 | If hold's use the new hold detection system (info in [tech notes](#holds)) |
+| vfx.darkness.enabled      | false                                                | Sets whether darkness is enabled or disabled.                              |
+| vfx.onTopUI               | true                                                 | If false, UI gets affected by VFX.                                         |
+| p.disableCostume          | false                                                | If true, the player no longer has a costume enabled.                       |
 
 #### Hidden/Editor Only (broken stuff and goofy or editor only)
 
