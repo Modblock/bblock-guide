@@ -9,7 +9,7 @@ More info from base editor guide.
   - [GETTING THE OFFSET](#getting-the-offset)
   - [Issues with Importing Songs](#issues-with-importing-songs)
   - [Placing Notes \& Events](#placing-notes--events)
-  - [Note Types](#note-types)
+    - [Note Types](#note-types)
     - [VFX Event Types](#vfx-event-types)
     - [Other Event Types](#other-event-types)
     - ["Dev Only" Event Types](#dev-only-event-types)
