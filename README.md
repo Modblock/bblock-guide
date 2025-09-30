@@ -11,7 +11,10 @@ More info from base editor guide.
   - [Placing Notes \& Events](#placing-notes--events)
   - [Note Types](#note-types)
     - [VFX Event Types](#vfx-event-types)
-    - [Other Event Types (and advanced)](#other-event-types-and-advanced)
+    - [Other Event Types](#other-event-types)
+    - ["Dev Only" Event Types](#dev-only-event-types)
+      - [Getting Access to "Dev Only" Event Types](#how-to-gain-access-to-dev-only-event-types)
+      - ["Dev Only" Event Types Table](#dev-only-event-types-tables)
   - [Editor Hotkeys](#editor-hotkeys)
 - [Var List](#var-list)
   - [Bools](#bools)
@@ -21,7 +24,7 @@ More info from base editor guide.
     - [VFX Easables](#vfx-easables)
     - [Player Easables](#player-easables)
     - [Hidden Easables](#hidden-easables)
-- [Objects (advanced)]()
+- [Objects (advanced)](#objects)
 - [Deco](#deco)
   - [Color Channels (and another bypass mod)](#color-channels-and-another-bypass-mod)
   - [Deco Properties](#deco-properties)
@@ -42,7 +45,7 @@ More info from base editor guide.
 
 ### Importing Songs
 
-1. Download song file in the format of OGG Vorbis(.ogg) (for YT vids use [cobalt](https://cobalt.tools))
+1. Download song file in the format of OGG Vorbis(.ogg) (for YT vids use [cobalt](https://cobalt.tools)(depreciated as of this commit because of YouTube backend change or something of that sort.))
 2. Open two instances(or tabs) of file explorer.
 3. Open one to where you downloaded the file to and the other instance(or tab) to the level folder
 4. Move/copy the .ogg file to the level folder.
@@ -91,9 +94,9 @@ More info from base editor guide.
     3. From there go to advanced and turn "show all filename extensions" on.
 - Make sure you actually changed BPM and added your offset.
 
-### Placing Notes & Events
+## Placing Notes & Events
 
-[im just gonna make a youtube tutorial]
+[Simply click]
 
 
 ### Note Types
@@ -129,7 +132,7 @@ More info from base editor guide.
 | S. BGColor | Sets the background to a certain palette value.                                                               | ![BGCol](pics/events/bgcolr.png) |
 | ForcePSprt | Forces Player Sprite. It can be set to a custom sprite as well if you add it to level file.                   | ![FPS](pics/events/forceps.png)  |
 
-### Other Event Types (and advanced)
+### Other Event Types
 
 | Event Name | Event Desc                                                                                       | Image                              |
 | ---------- | ------------------------------------------------------------------------------------------------ | ---------------------------------- |
@@ -138,23 +141,37 @@ More info from base editor guide.
 | Bookmark   | Much like an actual bookmark, creates a pointer that you can find easily with Alt in the editor. | ![BMark](pics/events/book.png)     |
 | Set BPM    | ... sets the Beats Per Minute. Please get what it is and don't set it to an arbitrary value.     | ![Metronome](pics/events/sbpm.png) |
 
-| Advanced           | Advanced Desc (some of these might be EA only)      | Image |
-| ------------------ | --------------------------------------------------- | ----- |
-| Init Object        | Initialize an object (listed [elsewhere](#objects)) | WIP   |
-| Single Pulse       | Pulse or smth idk.                                  | WIP   |
-| Multi Pulse        | Pulse multiple times or smth idk.                   | WIP   |
-| Parallax BG        | Allows you to set up a parallax BG or smth idk.     | WIP   |
-| Play Midi          | Piano rolls go hard or smth idk.                    | WIP   |
-| Set Background     | "What do you think it does?"                        | WIP   |
-| Set Joystick Color | Changes the physical joystick color or smth idk.    | WIP   |
-| Trace              | Create a line that the player can or smth idk.      | WIP   |
-| Video Background   | "What do you think it does?" part 2                 | WIP   |
+### "Dev Only" Event types
 
-| depreciated  | depreciated desc (some from the demo are missing) | Image |
-| ------------ | ------------------------------------------------- | ----- |
-| Spawn Beat   | Spawns a block event with screwed up scoring.     | WIP   |
-| Paddle Count | Changes the paddle count.                         | WIP   |
-| Change Width | Something about changing width idk                | WIP   |
+#### Getting access to "Dev Only" event types 
+
+1. Download 7-zip or some software that allows editing `.exe`s as archives without extraction
+2. Open the archive editor on `beatblock.exe`
+3. Delete the `DEVONLY` file in `levelformat/events/Advanced`, `levelformat/events/depreciated`, and `levelformat/events/level`
+4. You're all done, you should have access to devonly stuff in the editor now.
+
+#### "Dev Only" Event Types Tables
+<sub> WIP, I actually need to check in the game and do some testing for more accurate info
+
+| Advanced           | Advanced Desc (some of these might be EA only)      | Image                                          |
+| ------------------ | --------------------------------------------------- | ---------------------------------------------- |
+| Init Object        | Initialize an object (listed [elsewhere](#objects)) | ![Generic Event](pics/events/genericevent.png) |
+| Single Pulse       | Pulse or smth idk.                                  | ![Generic Event](pics/events/genericevent.png) |
+| Multi Pulse        | Pulse multiple times or smth idk.                   | ![Generic Event](pics/events/genericevent.png) |
+| Parallax BG        | Allows you to set up a parallax BG or smth idk.     | ![Generic Event](pics/events/genericevent.png) |
+| Play Midi          | Piano rolls go hard or smth idk.                    | ![Generic Event](pics/events/genericevent.png) |
+| Set Background     | "What do you think it does?"                        | ![Generic Event](pics/events/genericevent.png) |
+| Set Joystick Color | Changes the physical joystick color or smth idk.    | ![Generic Event](pics/events/genericevent.png) |
+| Trace              | Create a line that the player can or smth idk.      | ![Generic Event](pics/events/genericevent.png) |
+| Video Background   | "What do you think it does?" part 2                 | ![Generic Event](pics/events/genericevent.png) |
+
+| depreciated  | depreciated desc (some from the demo are missing) | Image                                          |
+| ------------ | ------------------------------------------------- | ---------------------------------------------- |
+| Spawn Beat   | Spawns a block event with screwed up scoring.     | ![Generic Event](pics/events/genericevent.png) |
+| Paddle Count | Changes the paddle count.                         | ![Generic Event](pics/events/genericevent.png) |
+| Change Width | Something about changing width idk                | ![Generic Event](pics/events/genericevent.png) |
+
+I'm not writing all of the level event (at least right now), I'm way too lazy -astro
 
 
 ### Editor Hotkeys
@@ -328,6 +345,72 @@ these are "caseSensitive"
 ## Objects
 <sub> These require access to [devonly events](#other-event-types-and-advanced).  
 
+### The objects themselves
+
+| Level Objects      | Area(s) Used in base game (that I know of off the top of my head) |
+| ------------------ | ----------------------------------------------------------------- |
+| FishingPlayer      | Gone Fishing                                                      |
+| FishingWater       | Gone Fishing                                                      |
+| TrumpetGirl        | 3-Bit                                                             |
+| HoleBackground     | BEATROCK                                                          |
+| Lantern            | BEATROCK                                                          |
+| Track              | BEATROCK                                                          |
+| SpinningBomb       | Blow a Fuse                                                       |
+| Calibration        | Calibration                                                       |
+| CharacterSelect    | C-Me B-Me                                                         |
+| CMEDropBackground  | C-Me B-Me                                                         |
+| CMEParticles       | C-Me B-Me                                                         |
+| Damoclism          | Damoclism                                                         |
+| DamoclismBG        | Damoclism                                                         |
+| ColorGlitchRects   | Erachimaera                                                       |
+| DecpAtomMap        | Erachimaera                                                       |
+| LadybugCoin        | Ladybug Castle                                                    |
+| LadybugManager     | Ladybug Castle                                                    |
+| LawrenceBG         | Lawrence                                                          |
+| GlitchRects        | Lucky Break                                                       |
+| Lucky              | Lucky Break                                                       |
+| FallingSprites     | Island of Orchids                                                 |
+| Plasma             | Island of Orchids                                                 |
+| SineWaves          | Island of Orchids                                                 |
+| PublicoBars        | publico cautivo                                                   |
+| CatHorde           | Shinamon                                                          |
+| ShinamonBG         | Shinamon                                                          |
+| MidiLightning      | Through the Static                                                |
+| Web                | +Eraby+E Connec+10n                                               |
+| Tutorial           | Tutorial                                                          |
+| TutorialBG         | Tutorial                                                          |
+| MidiPiano          | idk                                                               |
+| Rain               | idk                                                               |
+| RainBG             | idk                                                               |
+| MonitorTheme       | idk                                                               |
+| ParallaxBackground | idk                                                               |
+
+| Map Objects     | Where it's used off the top of my head |
+| --------------- | -------------------------------------- |
+| Atom            | the map                                |
+| LevelQuark      | the map                                |
+| MarathonQuark   | the map                                |
+| UnlockParticles | the map                                |
+
+| notes objects                     | where it's used                       |
+| --------------------------------- | ------------------------------------- |
+| do we really need to go over this | [look at this cool spot](#note-types) |
+
+| UI Objects     | where it's used       |
+| -------------- | --------------------- |
+| CreditsBG      | The credits.          |
+| MenuBackground | The menu.             |
+| PauseMenu      | "Where do you think?" |
+| PopupManager   | The popups.           |
+| UnlockToast    | The toast.            |
+
+| General Objects                      | Where it's used off the top of my head. |
+| ------------------------------------ | --------------------------------------- |
+| These are literally just the events. | [Here](#placing-notes--events)          |
+
+### The objects' variables
+
+This'll be added once I actually check the code base. -astro
 
 ## Deco
 
@@ -463,7 +546,7 @@ You can find the file directory under by opening in Beatblock or by navigation t
 | ------- | -------------------------------------------------------------------------------- |
 | Windows | `%appdata%/Beatblock/Custom Levels` or `C:\Users\USER\AppData\Roaming\beatblock` |
 | MacOS   | `~/Library/Application Support/Beatblock/Custom Levels`                          |
-| Linux   | Depends on distro and install method, so your on your own, srry.                 |
+| Linux   | Depends on distro and install method, so your on your own, srry not srry.        |
 
 ### How to export a custom level
 
