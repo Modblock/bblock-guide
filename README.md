@@ -21,6 +21,7 @@ More info from base editor guide.
     - [VFX Easables](#vfx-easables)
     - [Player Easables](#player-easables)
     - [Hidden Easables](#hidden-easables)
+- [Objects (advanced)]()
 - [Deco](#deco)
   - [Color Channels (and another bypass mod)](#color-channels-and-another-bypass-mod)
   - [Deco Properties](#deco-properties)
@@ -137,6 +138,25 @@ More info from base editor guide.
 | Bookmark   | Much like an actual bookmark, creates a pointer that you can find easily with Alt in the editor. | ![BMark](pics/events/book.png)     |
 | Set BPM    | ... sets the Beats Per Minute. Please get what it is and don't set it to an arbitrary value.     | ![Metronome](pics/events/sbpm.png) |
 
+| Advanced           | Advanced Desc (some of these might be EA only)      | Image |
+| ------------------ | --------------------------------------------------- | ----- |
+| Init Object        | Initialize an object (listed [elsewhere](#objects)) | WIP   |
+| Single Pulse       | Pulse or smth idk.                                  | WIP   |
+| Multi Pulse        | Pulse multiple times or smth idk.                   | WIP   |
+| Parallax BG        | Allows you to set up a parallax BG or smth idk.     | WIP   |
+| Play Midi          | Piano rolls go hard or smth idk.                    | WIP   |
+| Set Background     | "What do you think it does?"                        | WIP   |
+| Set Joystick Color | Changes the physical joystick color or smth idk.    | WIP   |
+| Trace              | Create a line that the player can or smth idk.      | WIP   |
+| Video Background   | "What do you think it does?" part 2                 | WIP   |
+
+| depreciated  | depreciated desc (some from the demo are missing) | Image |
+| ------------ | ------------------------------------------------- | ----- |
+| Spawn Beat   | Spawns a block event with screwed up scoring.     | WIP   |
+| Paddle Count | Changes the paddle count.                         | WIP   |
+| Change Width | Something about changing width idk                | WIP   |
+
+
 ### Editor Hotkeys
 
 | Hotkey     | Purpose                | Notes                                                                                                                                                    |
@@ -160,26 +180,26 @@ these are "caseSensitive"
 
 #### Standard Bools
 
-| Variable Name             | Default                                              | Description                                                                |
-| ------------------------- | ---------------------------------------------------- | -------------------------------------------------------------------------- |
-| paused                    | false                                                | Should the level be paused?                                                |
-| holdEntityDraw            | true                                                 | Should do something with holds?                                            |
-| vfx.hwaves.flip           | false                                                | Should the amplitude of hwaves flip every frame? (hwaves is easable)       |
-| vfx.notesFollowPlayer     | true                                                 | Should notes move with the player when p.x or p.y is changed               |
-| vfx.drawCombo             | true                                                 | Should combo be displayed?                                                 |
-| vfx.drawAccuracy          | true                                                 | Should accuracy be displayed in expanded hud?                              |
-| vfx.drawSongTitle         | true                                                 | Should song title be displayed in expanded hud?                            |
-| vfx.drawUI                | true                                                 | Should UI be displayed? (has priority over draw vars)                      |
-| vfx.ignoreNoiseCorrection | false                                                | Should the alternate noise calculation methode be used?                    |
-| exitingLevel              | false                                                | Should the level end on pause-resume or beat 0 if placed in load beat?     |
-| vfx.calibration           | false                                                | Should the level use calibration system?                                   |
-|                           |                                                      |                                                                            |
-|                           | From this point down is early access and later only. |                                                                            |
-|                           |                                                      |                                                                            |
-| newHoldDetection          | true                                                 | If hold's use the new hold detection system (info in [tech notes](#holds)) |
-| vfx.darkness.enabled      | false                                                | Sets whether darkness is enabled or disabled.                              |
-| vfx.onTopUI               | true                                                 | If false, UI gets affected by VFX.                                         |
-| p.disableCostume          | false                                                | If true, the player no longer has a costume enabled.                       |
+| Variable Name             | Default | Description                                                                |
+| ------------------------- | ------- | -------------------------------------------------------------------------- |
+| paused                    | false   | Should the level be paused?                                                |
+| holdEntityDraw            | true    | Should do something with holds?                                            |
+| vfx.hwaves.flip           | false   | Should the amplitude of hwaves flip every frame? (hwaves is easable)       |
+| vfx.notesFollowPlayer     | true    | Should notes move with the player when p.x or p.y is changed               |
+| vfx.drawCombo             | true    | Should combo be displayed?                                                 |
+| vfx.drawAccuracy          | true    | Should accuracy be displayed in expanded hud?                              |
+| vfx.drawSongTitle         | true    | Should song title be displayed in expanded hud?                            |
+| vfx.drawUI                | true    | Should UI be displayed? (has priority over draw vars)                      |
+| vfx.ignoreNoiseCorrection | false   | Should the alternate noise calculation methode be used?                    |
+| exitingLevel              | false   | Should the level end on pause-resume or beat 0 if placed in load beat?     |
+| vfx.calibration           | false   | Should the level use calibration system?                                   |
+|                           |         |                                                                            |
+|                           |         | From this point down is early access and later only.                       |
+|                           |         |                                                                            |
+| newHoldDetection          | true    | If hold's use the new hold detection system (info in [tech notes](#holds)) |
+| vfx.darkness.enabled      | false   | Sets whether darkness is enabled or disabled.                              |
+| vfx.onTopUI               | true    | If false, UI gets affected by VFX.                                         |
+| p.disableCostume          | false   | If true, the player no longer has a costume enabled.                       |
 
 #### Hidden/Editor Only (broken stuff and goofy or editor only)
 
@@ -305,6 +325,10 @@ these are "caseSensitive"
 | cBeat         | 0       | Set's beat(relative)                          | Kinda(breaks editor) |
 <sub/> There are text eases, more info **will** be in wiki
 
+## Objects
+<sub> These require access to [devonly events](#other-event-types-and-advanced).  
+
+
 ## Deco
 
 ### Color Channels (and another bypass mod)
@@ -354,7 +378,7 @@ Animated Deco is a spritesheet of an animation that must comply to the [8 color 
 An example of a spritesheet looks like such.
 
 | ![decoexample](pics/examples/earthwater-old.png) |
-| - |
+| ------------------------------------------------ |
 
 The spritesheet requires a JSON file with the same name as the spritesheet file for the game to actually interpet the spritesheet correctly.
 Spritesheet is also indexed start from 0. i.e. if your animation has 16 frames, it will be indexed from 0-15.
@@ -435,11 +459,11 @@ You can get custom levels from The [*Beatblock Browser*](https://beatblockbrowse
 The simple part, to import your Custom Levels you can either drag them into your beatblock window when in the custom levels screen or inserting the level folder manually in your file explorer.
 You can find the file directory under by opening in Beatblock or by navigation to any of these directories below.
 
-| OS      | Directory                                                                           |
-| ------- | ----------------------------------------------------------------------------------- |
-| Windows | `%appdata%/Beatblock/Custom Levels` or `C:\Users\USER\AppData\Roaming\beatblock`    |
-| MacOS   | `~/Library/Application Support/Beatblock/Custom Levels`                             |
-| Linux   | Depends on distro and install method, so your on your own, srry. |
+| OS      | Directory                                                                        |
+| ------- | -------------------------------------------------------------------------------- |
+| Windows | `%appdata%/Beatblock/Custom Levels` or `C:\Users\USER\AppData\Roaming\beatblock` |
+| MacOS   | `~/Library/Application Support/Beatblock/Custom Levels`                          |
+| Linux   | Depends on distro and install method, so your on your own, srry.                 |
 
 ### How to export a custom level
 
