@@ -9,9 +9,12 @@ More info from base editor guide.
   - [GETTING THE OFFSET](#getting-the-offset)
   - [Issues with Importing Songs](#issues-with-importing-songs)
   - [Placing Notes \& Events](#placing-notes--events)
-  - [Note Types](#note-types)
+    - [Note Types](#note-types)
     - [VFX Event Types](#vfx-event-types)
-    - [Other Event Types (and advanced)](#other-event-types-and-advanced)
+    - [Other Event Types](#other-event-types)
+    - ["Dev Only" Event Types](#dev-only-event-types)
+      - [Getting Access to "Dev Only" Event Types](#how-to-gain-access-to-dev-only-event-types)
+      - ["Dev Only" Event Types Table](#dev-only-event-types-tables)
   - [Editor Hotkeys](#editor-hotkeys)
 - [Var List](#var-list)
   - [Bools](#bools)
@@ -21,6 +24,7 @@ More info from base editor guide.
     - [VFX Easables](#vfx-easables)
     - [Player Easables](#player-easables)
     - [Hidden Easables](#hidden-easables)
+- [Objects (advanced)](#objects)
 - [Deco](#deco)
   - [Color Channels (and another bypass mod)](#color-channels-and-another-bypass-mod)
   - [Deco Properties](#deco-properties)
@@ -41,7 +45,7 @@ More info from base editor guide.
 
 ### Importing Songs
 
-1. Download song file in the format of OGG Vorbis(.ogg) (for YT vids use [cobalt](https://cobalt.tools))
+1. Download song file in the format of OGG Vorbis(.ogg) (for YT vids use [cobalt](https://cobalt.tools)(depreciated as of this commit because of YouTube backend change or something of that sort.))
 2. Open two instances(or tabs) of file explorer.
 3. Open one to where you downloaded the file to and the other instance(or tab) to the level folder
 4. Move/copy the .ogg file to the level folder.
@@ -90,9 +94,9 @@ More info from base editor guide.
     3. From there go to advanced and turn "show all filename extensions" on.
 - Make sure you actually changed BPM and added your offset.
 
-### Placing Notes & Events
+## Placing Notes & Events
 
-[im just gonna make a youtube tutorial]
+[Simply click]
 
 
 ### Note Types
@@ -128,7 +132,7 @@ More info from base editor guide.
 | S. BGColor | Sets the background to a certain palette value.                                                               | ![BGCol](pics/events/bgcolr.png) |
 | ForcePSprt | Forces Player Sprite. It can be set to a custom sprite as well if you add it to level file.                   | ![FPS](pics/events/forceps.png)  |
 
-### Other Event Types (and advanced)
+### Other Event Types
 
 | Event Name | Event Desc                                                                                       | Image                              |
 | ---------- | ------------------------------------------------------------------------------------------------ | ---------------------------------- |
@@ -136,6 +140,39 @@ More info from base editor guide.
 | Play Sound | Plays a sound, like any sound. as long it's in the level file or in the base game...             | ![Sound](pics/events/psound.png)   |
 | Bookmark   | Much like an actual bookmark, creates a pointer that you can find easily with Alt in the editor. | ![BMark](pics/events/book.png)     |
 | Set BPM    | ... sets the Beats Per Minute. Please get what it is and don't set it to an arbitrary value.     | ![Metronome](pics/events/sbpm.png) |
+
+### "Dev Only" Event types
+
+#### Getting access to "Dev Only" event types 
+
+1. Download 7-zip or some software that allows editing `.exe`s as archives without extraction
+2. Open the archive editor on `beatblock.exe`
+3. Delete the `DEVONLY` file in `levelformat/events/Advanced`, `levelformat/events/depreciated`, and `levelformat/events/level`
+4. You're all done, you should have access to devonly stuff in the editor now.
+
+#### "Dev Only" Event Types Tables
+<sub> WIP, I actually need to check in the game and do some testing for more accurate info
+
+| Advanced           | Advanced Desc (some of these might be EA only)      | Image                                          |
+| ------------------ | --------------------------------------------------- | ---------------------------------------------- |
+| Init Object        | Initialize an object (listed [elsewhere](#objects)) | ![Generic Event](pics/events/genericevent.png) |
+| Single Pulse       | Pulse or smth idk.                                  | ![Generic Event](pics/events/genericevent.png) |
+| Multi Pulse        | Pulse multiple times or smth idk.                   | ![Generic Event](pics/events/genericevent.png) |
+| Parallax BG        | Allows you to set up a parallax BG or smth idk.     | ![Generic Event](pics/events/genericevent.png) |
+| Play Midi          | Piano rolls go hard or smth idk.                    | ![Generic Event](pics/events/genericevent.png) |
+| Set Background     | "What do you think it does?"                        | ![Generic Event](pics/events/genericevent.png) |
+| Set Joystick Color | Changes the physical joystick color or smth idk.    | ![Generic Event](pics/events/genericevent.png) |
+| Trace              | Create a line that the player can or smth idk.      | ![Generic Event](pics/events/genericevent.png) |
+| Video Background   | "What do you think it does?" part 2                 | ![Generic Event](pics/events/genericevent.png) |
+
+| depreciated  | depreciated desc (some from the demo are missing) | Image                                          |
+| ------------ | ------------------------------------------------- | ---------------------------------------------- |
+| Spawn Beat   | Spawns a block event with screwed up scoring.     | ![Generic Event](pics/events/genericevent.png) |
+| Paddle Count | Changes the paddle count.                         | ![Generic Event](pics/events/genericevent.png) |
+| Change Width | Something about changing width idk                | ![Generic Event](pics/events/genericevent.png) |
+
+I'm not writing all of the level event (at least right now), I'm way too lazy -astro
+
 
 ### Editor Hotkeys
 
@@ -160,26 +197,26 @@ these are "caseSensitive"
 
 #### Standard Bools
 
-| Variable Name             | Default                                              | Description                                                                |
-| ------------------------- | ---------------------------------------------------- | -------------------------------------------------------------------------- |
-| paused                    | false                                                | Should the level be paused?                                                |
-| holdEntityDraw            | true                                                 | Should do something with holds?                                            |
-| vfx.hwaves.flip           | false                                                | Should the amplitude of hwaves flip every frame? (hwaves is easable)       |
-| vfx.notesFollowPlayer     | true                                                 | Should notes move with the player when p.x or p.y is changed               |
-| vfx.drawCombo             | true                                                 | Should combo be displayed?                                                 |
-| vfx.drawAccuracy          | true                                                 | Should accuracy be displayed in expanded hud?                              |
-| vfx.drawSongTitle         | true                                                 | Should song title be displayed in expanded hud?                            |
-| vfx.drawUI                | true                                                 | Should UI be displayed? (has priority over draw vars)                      |
-| vfx.ignoreNoiseCorrection | false                                                | Should the alternate noise calculation methode be used?                    |
-| exitingLevel              | false                                                | Should the level end on pause-resume or beat 0 if placed in load beat?     |
-| vfx.calibration           | false                                                | Should the level use calibration system?                                   |
-|                           |                                                      |                                                                            |
-|                           | From this point down is early access and later only. |                                                                            |
-|                           |                                                      |                                                                            |
-| newHoldDetection          | true                                                 | If hold's use the new hold detection system (info in [tech notes](#holds)) |
-| vfx.darkness.enabled      | false                                                | Sets whether darkness is enabled or disabled.                              |
-| vfx.onTopUI               | true                                                 | If false, UI gets affected by VFX.                                         |
-| p.disableCostume          | false                                                | If true, the player no longer has a costume enabled.                       |
+| Variable Name             | Default | Description                                                                |
+| ------------------------- | ------- | -------------------------------------------------------------------------- |
+| paused                    | false   | Should the level be paused?                                                |
+| holdEntityDraw            | true    | Should do something with holds?                                            |
+| vfx.hwaves.flip           | false   | Should the amplitude of hwaves flip every frame? (hwaves is easable)       |
+| vfx.notesFollowPlayer     | true    | Should notes move with the player when p.x or p.y is changed               |
+| vfx.drawCombo             | true    | Should combo be displayed?                                                 |
+| vfx.drawAccuracy          | true    | Should accuracy be displayed in expanded hud?                              |
+| vfx.drawSongTitle         | true    | Should song title be displayed in expanded hud?                            |
+| vfx.drawUI                | true    | Should UI be displayed? (has priority over draw vars)                      |
+| vfx.ignoreNoiseCorrection | false   | Should the alternate noise calculation methode be used?                    |
+| exitingLevel              | false   | Should the level end on pause-resume or beat 0 if placed in load beat?     |
+| vfx.calibration           | false   | Should the level use calibration system?                                   |
+|                           |         |                                                                            |
+|                           |         | From this point down is early access and later only.                       |
+|                           |         |                                                                            |
+| newHoldDetection          | true    | If hold's use the new hold detection system (info in [tech notes](#holds)) |
+| vfx.darkness.enabled      | false   | Sets whether darkness is enabled or disabled.                              |
+| vfx.onTopUI               | true    | If false, UI gets affected by VFX.                                         |
+| p.disableCostume          | false   | If true, the player no longer has a costume enabled.                       |
 
 #### Hidden/Editor Only (broken stuff and goofy or editor only)
 
@@ -305,6 +342,76 @@ these are "caseSensitive"
 | cBeat         | 0       | Set's beat(relative)                          | Kinda(breaks editor) |
 <sub/> There are text eases, more info **will** be in wiki
 
+## Objects
+<sub> These require access to [devonly events](#other-event-types-and-advanced).  
+
+### The objects themselves
+
+| Level Objects      | Area(s) Used in base game (that I know of off the top of my head) |
+| ------------------ | ----------------------------------------------------------------- |
+| FishingPlayer      | Gone Fishing                                                      |
+| FishingWater       | Gone Fishing                                                      |
+| TrumpetGirl        | 3-Bit                                                             |
+| HoleBackground     | BEATROCK                                                          |
+| Lantern            | BEATROCK                                                          |
+| Track              | BEATROCK                                                          |
+| SpinningBomb       | Blow a Fuse                                                       |
+| Calibration        | Calibration                                                       |
+| CharacterSelect    | C-Me B-Me                                                         |
+| CMEDropBackground  | C-Me B-Me                                                         |
+| CMEParticles       | C-Me B-Me                                                         |
+| Damoclism          | Damoclism                                                         |
+| DamoclismBG        | Damoclism                                                         |
+| ColorGlitchRects   | Erachimaera                                                       |
+| DecpAtomMap        | Erachimaera                                                       |
+| LadybugCoin        | Ladybug Castle                                                    |
+| LadybugManager     | Ladybug Castle                                                    |
+| LawrenceBG         | Lawrence                                                          |
+| GlitchRects        | Lucky Break                                                       |
+| Lucky              | Lucky Break                                                       |
+| FallingSprites     | Island of Orchids                                                 |
+| Plasma             | Island of Orchids                                                 |
+| SineWaves          | Island of Orchids                                                 |
+| PublicoBars        | publico cautivo                                                   |
+| CatHorde           | Shinamon                                                          |
+| ShinamonBG         | Shinamon                                                          |
+| MidiLightning      | Through the Static                                                |
+| Web                | +Eraby+E Connec+10n                                               |
+| Tutorial           | Tutorial                                                          |
+| TutorialBG         | Tutorial                                                          |
+| MidiPiano          | idk                                                               |
+| Rain               | idk                                                               |
+| RainBG             | idk                                                               |
+| MonitorTheme       | idk                                                               |
+| ParallaxBackground | idk                                                               |
+
+| Map Objects     | Where it's used off the top of my head |
+| --------------- | -------------------------------------- |
+| Atom            | the map                                |
+| LevelQuark      | the map                                |
+| MarathonQuark   | the map                                |
+| UnlockParticles | the map                                |
+
+| notes objects                     | where it's used                       |
+| --------------------------------- | ------------------------------------- |
+| do we really need to go over this | [look at this cool spot](#note-types) |
+
+| UI Objects     | where it's used       |
+| -------------- | --------------------- |
+| CreditsBG      | The credits.          |
+| MenuBackground | The menu.             |
+| PauseMenu      | "Where do you think?" |
+| PopupManager   | The popups.           |
+| UnlockToast    | The toast.            |
+
+| General Objects                      | Where it's used off the top of my head. |
+| ------------------------------------ | --------------------------------------- |
+| These are literally just the events. | [Here](#placing-notes--events)          |
+
+### The objects' variables
+
+This'll be added once I actually check the code base. -astro
+
 ## Deco
 
 ### Color Channels (and another bypass mod)
@@ -354,7 +461,7 @@ Animated Deco is a spritesheet of an animation that must comply to the [8 color 
 An example of a spritesheet looks like such.
 
 | ![decoexample](pics/examples/earthwater-old.png) |
-| - |
+| ------------------------------------------------ |
 
 The spritesheet requires a JSON file with the same name as the spritesheet file for the game to actually interpet the spritesheet correctly.
 Spritesheet is also indexed start from 0. i.e. if your animation has 16 frames, it will be indexed from 0-15.
@@ -435,11 +542,11 @@ You can get custom levels from The [*Beatblock Browser*](https://beatblockbrowse
 The simple part, to import your Custom Levels you can either drag them into your beatblock window when in the custom levels screen or inserting the level folder manually in your file explorer.
 You can find the file directory under by opening in Beatblock or by navigation to any of these directories below.
 
-| OS      | Directory                                                                           |
-| ------- | ----------------------------------------------------------------------------------- |
-| Windows | `%appdata%/Beatblock/Custom Levels` or `C:\Users\USER\AppData\Roaming\beatblock`    |
-| MacOS   | `~/Library/Application Support/Beatblock/Custom Levels`                             |
-| Linux   | Depends on distro and install method, so your on your own, srry. |
+| OS      | Directory                                                                        |
+| ------- | -------------------------------------------------------------------------------- |
+| Windows | `%appdata%/Beatblock/Custom Levels` or `C:\Users\USER\AppData\Roaming\beatblock` |
+| MacOS   | `~/Library/Application Support/Beatblock/Custom Levels`                          |
+| Linux   | Depends on distro and install method, so your on your own, srry not srry.        |
 
 ### How to export a custom level
 
